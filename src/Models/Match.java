@@ -2,6 +2,7 @@ package Models;
 
 import Enums.BetSide;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,12 +13,11 @@ public class Match {
     public float sideBCoef;
     public BetSide winSide;
 
-    public Match(String fromFileString){
-        List<String> elephantList = Arrays.asList(fromFileString.split(","));
-        this.id = elephantList.get(0);
-        this.sideACoef = Float.parseFloat(elephantList.get(1));
-        this.sideBCoef = Float.parseFloat(elephantList.get(2));
-        this.winSide = BetSide.valueOf(elephantList.get(3));
+    public Match(List<String> matchFromScanner){
+        this.id = matchFromScanner.get(0);
+        this.sideACoef = Float.parseFloat(matchFromScanner.get(1));
+        this.sideBCoef = Float.parseFloat(matchFromScanner.get(2));
+        this.winSide = BetSide.valueOf(matchFromScanner.get(3));
     }
 
 }

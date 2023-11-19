@@ -13,8 +13,7 @@ import java.util.*;
 public class PlayerLoader implements BaseLoader {
 
     final HashMap<String, Match> matchList;
-    final HashMap<String, Player> playerHashMap = new HashMap<String, Player>();
-
+    public HashMap<String, Player> playerHashMap = new HashMap<String, Player>();
     public HashMap<String, BetData> illegalOperations = new HashMap<String, BetData>();
     public float casinoBalance;
     public PlayerLoader(HashMap<String, Match> matchList){
@@ -73,7 +72,6 @@ public class PlayerLoader implements BaseLoader {
                 }
             }
         }
-
         System.out.println(playerHashMap);
         System.out.println(illegalOperations);
         System.out.println(casinoBalance);

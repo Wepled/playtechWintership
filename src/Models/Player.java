@@ -9,7 +9,7 @@ import java.text.DecimalFormat;
 public class Player {
 
     public String id;
-    public float coins = 0f;
+    public long coins = 0;
     public int matches = 0;
     public int wonMatches = 0;
 
@@ -20,7 +20,7 @@ public class Player {
         double a = (double) wonMatches / matches;
         String[] arr = new String[]{
                 id,
-                Float.toString(coins),
+                Long.toString(coins),
                 df.format(a * 100)
         };
 
